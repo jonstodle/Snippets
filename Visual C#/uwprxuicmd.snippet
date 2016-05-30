@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>UWP ReactiveUI command</Title>
+      <Author>Jon Stødle</Author>
+      <Description>Inserts a UWP ReactiveUI command</Description>
+      <HelpUrl></HelpUrl>
+      <Shortcut>uwprxuicmd</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>boolField</ID>
+          <ToolTip>Lowercase name of command</ToolTip>
+          <Default>myCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>commandName</ID>
+          <ToolTip>Name of command</ToolTip>
+          <Default>MyCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[private ObservableAsPropertyHelper<bool> $boolField$CanExecute;
+		public bool $commandName$CanExecute => $boolField$CanExecute.Value;
+		public ReactiveCommand<object> $commandName$ { get; set; }$end$]]>
+			</Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
