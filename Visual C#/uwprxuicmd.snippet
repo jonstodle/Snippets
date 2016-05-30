@@ -14,13 +14,6 @@
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <ID>boolField</ID>
-          <ToolTip>Lowercase name of command</ToolTip>
-          <Default>myCommand</Default>
-          <Function>
-          </Function>
-        </Literal>
-        <Literal Editable="true">
           <ID>commandName</ID>
           <ToolTip>Name of command</ToolTip>
           <Default>MyCommand</Default>
@@ -28,8 +21,8 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[private ObservableAsPropertyHelper<bool> $boolField$CanExecute;
-		public bool $commandName$CanExecute => $boolField$CanExecute.Value;
+      <Code Language="csharp" Delimiter="$"><![CDATA[private ObservableAsPropertyHelper<bool> can$commandName$;
+		public bool Can$commandName$ => can$commandName$.Value;
 		public ReactiveCommand<object> $commandName$ { get; set; }$end$]]>
 			</Code>
     </Snippet>
