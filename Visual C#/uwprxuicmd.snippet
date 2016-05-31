@@ -21,9 +21,9 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[private ObservableAsPropertyHelper<bool> can$commandName$;
-		public bool Can$commandName$ => can$commandName$.Value;
-		public ReactiveCommand<object> $commandName$ { get; set; }$end$]]>
+      <Code Language="csharp" Delimiter="$"><![CDATA[public ReactiveCommand<object> $commandName$ { get; set; }
+    private ObservableAsPropertyHelper<bool> can$commandName$;
+		public bool Can$commandName$ => can$commandName$.Value;$end$]]>
 			</Code>
     </Snippet>
   </CodeSnippet>
