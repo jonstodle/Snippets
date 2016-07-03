@@ -37,7 +37,7 @@
       </Declarations>
       <Code Language="csharp" Delimiter="$"><![CDATA[public $type$ $propertyName$
 		{
-			get { return _helper.Read<$type$>(nameof($propertyName$), $defaultValue$); }
+			get { return _helper.Read(nameof($propertyName$), $defaultValue$); }
 			set { _helper.Write(nameof($propertyName$), value); }
 		}$end$]]>
 			</Code>
