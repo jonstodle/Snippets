@@ -35,8 +35,7 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[private $type$ $fieldName$;
-public $type$ $propertyName$
+      <Code Language="csharp" Delimiter="$"><![CDATA[public $type$ $propertyName$
 {
 	get { return $fieldName$; }
 	set { this.RaiseAndSetIfChanged(ref $fieldName$, value); }}$end$]]>
