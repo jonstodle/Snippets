@@ -14,13 +14,6 @@
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <ID>viewModel</ID>
-          <ToolTip>ViewModel property</ToolTip>
-          <Default>ViewModel</Default>
-          <Function>
-          </Function>
-        </Literal>
-        <Literal Editable="true">
           <ID>vmProperty</ID>
           <ToolTip>Property on viewmodel</ToolTip>
           <Default>Property</Default>
@@ -35,7 +28,7 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[this.Bind($viewModel$, vm => vm.$vmProperty$, v => v.$viewProperty$);$end$]]>
+      <Code Language="csharp" Delimiter="$"><![CDATA[this.Bind(ViewModel, vm => vm.$vmProperty$, v => v.$viewProperty$);$end$]]>
 			</Code>
     </Snippet>
   </CodeSnippet>
