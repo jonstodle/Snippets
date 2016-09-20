@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>ReactiveUI IViewFor Implementation</Title>
+      <Author>Jon Stødle</Author>
+      <Description>Inserts an RxUI IViewFor Implementation</Description>
+      <HelpUrl></HelpUrl>
+      <Shortcut>rxuiivf</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>view</ID>
+          <ToolTip>Type of view</ToolTip>
+          <Default>myView</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[public $view$ViewModel ViewModel
+		{
+			get { return ($view$ViewModel)GetValue(ViewModelProperty); }
+			set { SetValue(ViewModelProperty, value); }
+		}
+
+		public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel), typeof($view$ViewModel), typeof($view$), new PropertyMetadata(null));
+
+		object IViewFor.ViewModel
+		{
+			get { return ViewModel; }
+			set { ViewModel = value as $view$ViewModel; }
+		}$end$]]>
+			</Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
