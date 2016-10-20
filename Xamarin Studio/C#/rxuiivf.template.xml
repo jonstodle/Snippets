@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>rxuiivf</Shortcut>
+      <_Description>Inserts an RxUI IViewFor implementation</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="view">
+        <Default>MyView</Default>
+        <_ToolTip>The name of the view</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[public $view$ViewModel ViewModel
+{
+	get { return ($view$ViewModel)GetValue(ViewModelProperty); }
+	set { SetValue(ViewModelProperty, value); }
+}
+
+public static readonly BindableProperty ViewModelProperty = BindableProperty.Create(nameof(ViewModel), typeof($view$ViewModel), typeof($view$), null);
+
+object IViewFor.ViewModel
+{
+	get { return ViewModel; }
+	set { ViewModel = ($view$ViewModel)value; }
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>
