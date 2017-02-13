@@ -42,12 +42,7 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[public $type$ $propertyName$
-		{
-			get { return ($type$)GetValue($propertyName$Property); }
-			set { SetValue($propertyName$Property, value); }
-		}
-
+      <Code Language="csharp" Delimiter="$"><![CDATA[public $type$ $propertyName$ { get => ($type$)GetValue($propertyName$Property); set => SetValue($propertyName$Property, value); }
 		public static readonly DependencyProperty $propertyName$Property = DependencyProperty.Register(nameof($propertyName$), typeof($type$), typeof($parent$), new PropertyMetadata($default$));$end$]]>
 			</Code>
     </Snippet>
