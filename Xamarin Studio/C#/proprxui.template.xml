@@ -23,10 +23,6 @@
         <_ToolTip>Name of backing field</_ToolTip>
       </Variable>
     </Variables>
-    <Code><![CDATA[public $type$ $propertyName$
-{
-	get { return $fieldName$; }
-	set { this.RaiseAndSetIfChanged(ref $fieldName$, value); }
-}]]></Code>
+    <Code><![CDATA[public $type$ $propertyName$ { get { return $fieldName$; } set { this.RaiseAndSetIfChanged(ref $fieldName$, value); } }]]></Code>
   </CodeTemplate>
 </CodeTemplates>
