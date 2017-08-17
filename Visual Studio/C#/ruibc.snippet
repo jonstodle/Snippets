@@ -5,30 +5,30 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>ReactiveUI Bind</Title>
+      <Title>ReactiveUI BindCommand</Title>
       <Author>Jon Stødle</Author>
-      <Description>Inserts a RactiveUI Bind</Description>
+      <Description>Inserts a RactiveUI BindCommand</Description>
       <HelpUrl></HelpUrl>
-      <Shortcut>rxuib</Shortcut>
+      <Shortcut>ruibc</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <ID>vmProperty</ID>
-          <ToolTip>Property on viewmodel</ToolTip>
-          <Default>Property</Default>
+          <ID>command</ID>
+          <ToolTip>Command on view model</ToolTip>
+          <Default>Command</Default>
           <Function>
           </Function>
         </Literal>
         <Literal Editable="true">
-          <ID>viewProperty</ID>
-          <ToolTip>Property on control in view</ToolTip>
-          <Default>Control.Property</Default>
+          <ID>control</ID>
+          <ToolTip>Control in view</ToolTip>
+          <Default>Control</Default>
           <Function>
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[this.Bind(ViewModel, vm => vm.$vmProperty$, v => v.$viewProperty$).DisposeWith(d);$end$]]>
+      <Code Language="csharp" Delimiter="$"><![CDATA[this.BindCommand(ViewModel, vm => vm.$command$, v => v.$control$).DisposeWith(d);$end$]]>
 			</Code>
     </Snippet>
   </CodeSnippet>

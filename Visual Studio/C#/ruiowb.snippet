@@ -5,11 +5,11 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>ReactiveUI Bind Command</Title>
+      <Title>ReactiveUI OneWayBind</Title>
       <Author>Jon Stødle</Author>
-      <Description>Inserts a RactiveUI Bind Command</Description>
+      <Description>Inserts a RactiveUI OneWayBind</Description>
       <HelpUrl></HelpUrl>
-      <Shortcut>rxuibc</Shortcut>
+      <Shortcut>ruiowb</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
@@ -28,7 +28,7 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[this.BindCommand(ViewModel, vm => vm.$vmProperty$, v => v.$viewProperty$).DisposeWith(d);$end$]]>
+      <Code Language="csharp" Delimiter="$"><![CDATA[this.OneWayBind(ViewModel, vm => vm.$vmProperty$, v => v.$viewProperty$).DisposeWith(d);$end$]]>
 			</Code>
     </Snippet>
   </CodeSnippet>

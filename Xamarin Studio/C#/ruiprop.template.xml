@@ -5,13 +5,13 @@
       <_Group>C#</_Group>
       <Version />
       <MimeType>text/x-csharp</MimeType>
-      <Shortcut>proprxui</Shortcut>
+      <Shortcut>ruiprop</Shortcut>
       <_Description>Inserts a ReactiveUI property</_Description>
       <TemplateType>Expansion</TemplateType>
     </Header>
     <Variables>
       <Variable name="type">
-        <Default>myType</Default>
+        <Default>string</Default>
         <_ToolTip>Type of field and property</_ToolTip>
       </Variable>
       <Variable name="propertyName">
@@ -23,6 +23,6 @@
         <_ToolTip>Name of backing field</_ToolTip>
       </Variable>
     </Variables>
-    <Code><![CDATA[public $type$ $propertyName$ { get { return $fieldName$; } set { this.RaiseAndSetIfChanged(ref $fieldName$, value); } }]]></Code>
+    <Code><![CDATA[public $type$ $propertyName$ { get => $fieldName$; set => this.RaiseAndSetIfChanged(ref $fieldName$, value); }]]></Code>
   </CodeTemplate>
 </CodeTemplates>

@@ -5,17 +5,17 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>ReactiveUI OneWayBind</Title>
+      <Title>ReactiveUI Bind</Title>
       <Author>Jon Stødle</Author>
-      <Description>Inserts a RactiveUI One Way Bind</Description>
+      <Description>Inserts a RactiveUI Bind</Description>
       <HelpUrl></HelpUrl>
-      <Shortcut>rxuiowb</Shortcut>
+      <Shortcut>ruib</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
         <Literal Editable="true">
           <ID>vmProperty</ID>
-          <ToolTip>Property on viewmodel</ToolTip>
+          <ToolTip>Property on view model</ToolTip>
           <Default>Property</Default>
           <Function>
           </Function>
@@ -28,7 +28,7 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[this.OneWayBind(ViewModel, vm => vm.$vmProperty$, v => v.$viewProperty$).DisposeWith(d);$end$]]>
+      <Code Language="csharp" Delimiter="$"><![CDATA[this.Bind(ViewModel, vm => vm.$vmProperty$, v => v.$viewProperty$).DisposeWith(d);$end$]]>
 			</Code>
     </Snippet>
   </CodeSnippet>

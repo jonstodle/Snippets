@@ -5,20 +5,20 @@
       <_Group>C#</_Group>
       <Version />
       <MimeType>text/x-csharp</MimeType>
-      <Shortcut>rxuibc</Shortcut>
-      <_Description>Inserts an RxUI BindCommand</_Description>
+      <Shortcut>ruibc</Shortcut>
+      <_Description>Inserts a RactiveUI BindCommand</_Description>
       <TemplateType>Expansion</TemplateType>
     </Header>
     <Variables>
       <Variable name="command">
-        <Default>MyCommand</Default>
-        <_ToolTip>Command on the view model</_ToolTip>
+        <Default>Command</Default>
+        <_ToolTip>Command on view model</_ToolTip>
       </Variable>
       <Variable name="control">
-        <Default>MyControl</Default>
-        <_ToolTip>Control on the view</_ToolTip>
+        <Default>Control</Default>
+        <_ToolTip>Control in view</_ToolTip>
       </Variable>
     </Variables>
-    <Code><![CDATA[this.BindCommand(ViewModel, vm => vm.$command$, v => v.$control$);]]></Code>
+    <Code><![CDATA[this.BindCommand(ViewModel, vm => vm.$command$, v => v.$control$).DisposeWith(d);]]></Code>
   </CodeTemplate>
 </CodeTemplates>
