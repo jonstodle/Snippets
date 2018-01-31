@@ -1,0 +1,54 @@
+<templateSet group="C#">
+  <template name="gprop" value="public $type$ $propName$ { get; }" description="Inserts a get-only property" toReformat="true" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="&quot;int&quot;" alwaysStopAt="true" />
+    <variable name="propName" expression="" defaultValue="&quot;myProp&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="dwl" value="System.Diagnostics.Debug.WriteLine($output$);" description="Inserts a call to Debug.WriteLine" toReformat="false" toShortenFQNames="true">
+    <variable name="output" expression="" defaultValue="&quot;\&quot;Test\&quot;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="bprop" value="public $type$ $propertyName$ { get =&gt; ($type$)GetValue($propertyName$Property); set =&gt; SetValue($propertyName$Property, value); }&#10;public static readonly BindableProperty $propertyName$Property = BindableProperty.Create(nameof($propertyName$), typeof($type$), typeof($parent$), $default$);" description="Inserts a BindableProperty" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="propertyName" expression="" defaultValue="&quot;MyProperty&quot;" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="&quot;ParentClass&quot;" alwaysStopAt="true" />
+    <variable name="default" expression="" defaultValue="&quot;null&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+</templateSet>
